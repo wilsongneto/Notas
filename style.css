@@ -1,0 +1,166 @@
+:root {
+    --ok: #0a7;
+    /* verde */
+    --warn: #c90;
+    /* amarelo */
+    --err: #c33;
+    /* vermelho */
+    --bg: #f7f7f9;
+    --ink: #222;
+    --muted: #666;
+    --card: #fff;
+    --border: #e5e7eb;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+    width: 100%;
+}
+
+h1,
+h2 {
+    margin: 0 0 12px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 8px;
+    font-weight: 600
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #888;
+    box-shadow: 0 0 0 3px #0001;
+}
+
+.actions {
+    margin-top: 12px;
+}
+
+button {
+    padding: 10px 14px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    background: #f3f3f3;
+    cursor: pointer;
+    font: inherit;
+    margin-right: 8px;
+}
+
+button:hover {
+    filter: brightness(0.98)
+}
+
+.msg {
+    min-height: 1.2em;
+    margin-top: 8px;
+    font-size: .95rem;
+    color: var(--muted);
+}
+
+.msg.ok {
+    color: var(--ok);
+}
+
+.msg.err {
+    color: var(--err);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #fafafa;
+}
+
+tr:hover {
+    background: #fcfcfc;
+}
+
+.destaque strong {
+    padding: 2px 8px;
+    border-radius: 8px
+}
+
+.ok-badge {
+    background: #eafff6;
+    color: #075;
+}
+
+.warn-badge {
+    background: #fff6e0;
+    color: #a70;
+}
+
+.err-badge {
+    background: #ffe9e9;
+    color: #a00;
+}
+
+.acao {
+    color: #06c;
+    cursor: pointer;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 16px 24px;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    background: #fff;
+}
+
