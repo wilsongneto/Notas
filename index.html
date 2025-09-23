@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard de Notas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+  <main class="container">
+    <h1>Dashboard de Notas</h1>
+
+    <!-- Formulário de cadastro de disciplina e nota -->
+    <form id="form-nota" class="card" autocomplete="off" novalidate>
+      <label>Disciplina
+        <input id="disciplina" type="text" placeholder="Ex.: Matemática" required />
+      </label>
+      <label>Nota (0 a 10)
+        <input id="nota" type="number" step="0.1" min="0" max="10" required />
+      </label>
+      <div class="actions">
+        <button type="submit">Adicionar</button>
+        <button type="button" id="limpar">Limpar Tudo</button>
+      </div>
+      <p class="msg" id="msg" aria-live="polite"></p>
+    </form>
+
+    <!-- Tabela de lançamentos -->
+    <section class="card">
+      <h2>Notas lançadas</h2>
+      <table id="tabela">
+        <thead>
+          <tr><th>Disciplina</th><th>Nota</th><th>Ações</th></tr>
+        </thead>
+        <tbody><!-- linhas via JS --></tbody>
+      </table>
+    </section>
+
+    <!-- Resumo -->
+    <section class="card destaque">
+      <h2>Resumo</h2>
+      <p>Média: <strong id="media">0,00</strong></p>
+      <p>Situação: <strong id="situacao">—</strong></p>
+    </section>
+  </main>
+  <footer class="footer">
+    <small>Feito para prática de HTML + CSS + JS (DOM, eventos, validação e localStorage).</small>
+  </footer>
+</body>
+</html>
