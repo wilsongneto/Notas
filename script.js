@@ -67,7 +67,7 @@ function atualizaResumo() {
   const soma = lancamentos.reduce((acc, item) => acc + item.nota, 0);
   const media = soma / lancamentos.length;
 
-  media.textContent = fmt2(media);
+  media.textContent = formt2(media);
 
   // Situação
   let sit = '';
@@ -104,7 +104,7 @@ function renderTabela() {
     tdDisc.textContent = item.disciplina;
 
     const tdNota = document.createElement('td');
-    tdNota.textContent = fmt2(item.nota);
+    tdNota.textContent = formt2(item.nota);
 
     const tdAcoes = document.createElement('td');
     // Botão remover
