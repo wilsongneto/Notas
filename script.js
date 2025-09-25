@@ -152,7 +152,7 @@ function adicionarLancamento(disciplina, notaStr) {
 
   // adiciona ao estado
   lancamentos.push({
-    id: uid(),
+    id: util(),
     disciplina: nome,
     nota
   });
