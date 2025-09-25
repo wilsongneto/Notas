@@ -93,7 +93,7 @@ function renderTabela() {
     td.style.color = '#666';
     tr.appendChild(td);
     tabelaBody.appendChild(tr);
-    atualizarResumo();
+    atualizaResumo();
     return;
   }
 
