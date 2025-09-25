@@ -58,7 +58,7 @@ function carregar() {
 /** Recalcula média e situação e atualiza UI */
 function atualizaResumo() {
   if (lancamentos.length === 0) {
-    media.textContent = '0,00';
+    media.textContent = '0.00';
     situacao.textContent = '—';
     situacao.className = '';
     return;
