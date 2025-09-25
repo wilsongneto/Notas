@@ -6,7 +6,7 @@ const btnLimpar = document.getElementById('limpar');
 const msg = document.getElementById('msg');
 
 const tabelaBody = document.querySelector('#tabela tbody');
-const media = document.getElementById('media');
+const media1 = document.getElementById('media');
 const situacao = document.getElementById('situacao');
 
 let lancamentos = [];
@@ -58,7 +58,7 @@ function carregar() {
 /** Recalcula média e situação e atualiza UI */
 function atualizaResumo() {
   if (lancamentos.length === 0) {
-    media.textContent = '0.00';
+    media1.textContent = '0.00';
     situacao.textContent = '—';
     situacao.className = '';
     return;
@@ -67,7 +67,7 @@ function atualizaResumo() {
   const soma = lancamentos.reduce((acc, item) => acc + item.nota, 0);
   const media = soma / lancamentos.length;
 
-  media.textContent = format2(media);
+  media1.textContent = format2(media);
 
   // Situação
   let sit = '';
